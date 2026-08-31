@@ -62,7 +62,7 @@ class NumberTable extends React.Component {
                                 key={id}
                                 number={number}
                                 onSelectClick={() => this.onSelectClick(obj)}
-                                isSelected={this.state.selectedNumbers.includes(obj)}
+                                isSelected={this.state.selectedNumbers.map(s => s.id).includes(id)}
                                 isLocked={this.state.lockedNumbersIds.includes(obj.id)}
                             />
                             );
